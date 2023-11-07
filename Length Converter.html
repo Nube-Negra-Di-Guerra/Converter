@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Length Converter - Fouad Ouyougoute</title>
+</head>
+<body>
+  
+  <h1 class="header">Length Converter By Fouad Ouyougoute</h1>
+  
+    <p class="unit"> <label>Inches</label>
+        <input class="bar" id="inputInches" type="number" placeholder="Inches" oninput="LengthConverter(this.value)" autofocus>
+      </p>
+      
+        <p class="unit">Milimeters: <span class="answer" id="milim"></span></p>
+
+        <p class="unit">Centimeters: <span class="answer" id="outputcm"></span></p>
+
+        <p class="unit">Meters: <span class="answer" id="Meters"></span></p>
+
+        <p class="unit">Kilometers: <span class="answer" id="kilometers"></span></p> 
+
+        <br>
+
+        <p class="unit">Miles: <span class="answer" id="Miles"></span></p>
+
+        <p class="unit">Feet: <span class="answer" id="outputft"></span></p>
+
+        <br>
+
+        <p class="unit">Nanometers: <span class="answer" id="Nano"></span></p>
+
+        <p class="unit">Yards: <span class="answer" id="yards"></span></p>
+
+        <p class="unit">Light Years: <span class="answer" id="LightYears"></span></p>
+
+        <p class="unit">Nautical Miles: <span class="answer" id="NauticalMiles"></span></p>
+
+
+
+      <script>
+
+          function LengthConverter(valNum) {
+          document.getElementById("outputcm").innerHTML=valNum*2.54 + (' cm');
+          document.getElementById("milim").innerHTML=valNum*25.4 + (' mm');
+          document.getElementById("outputft").innerHTML=valNum*0.08333333333 + (' ft');
+          document.getElementById("NauticalMiles").innerHTML=valNum*0.0000137149 + (' Nm');
+          document.getElementById("LightYears").innerHTML=valNum*2.6847757e-18+ (' LY');
+          document.getElementById("Meters").innerHTML=valNum*0.0254 + (' M');
+          document.getElementById("kilometers").innerHTML=valNum*0.00000254 + (' Km');
+          document.getElementById("yards").innerHTML=valNum*0.02777777778 + (' Yards');
+          document.getElementById("Miles").innerHTML=valNum*1.57828e-5 + (' Ml');
+          document.getElementById("Nano").innerHTML=valNum*25400000 + (' Nn');
+        }
+
+      </script>
+
+    <style>
+    .header{
+      text-align: center;
+      color: white;
+      background-color: grey;
+      height: fit-content;
+      padding: 10px 0 ;
+      width: 100%;
+      display: block;
+      top: 0;
+      font-family: Tahoma;
+    }
+
+    body{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color: mediumaquamarine;
+      margin: 0;
+    }
+
+    .unit{
+        font-weight:500;
+        color: black;
+        margin-left: 20px;
+        position: relative;        
+    }
+
+    .bar{
+      width: 500px;
+      height: 40px;
+      border-radius: 20px;
+      padding-left: 14px;
+      padding-right: 14px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border-style: solid;
+      border-width: 2px;
+      font-family: sans-serif;
+    }
+
+    .answer{
+      color: rebeccapurple;
+    }
+    </style>
+
+</body>
+</html>
